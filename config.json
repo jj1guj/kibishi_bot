@@ -1,5 +1,6 @@
 {
     "data_path":"/mnt/e/data_kibishi",
     "text_path":"test.txt",
-    "API_Key_path":"API_key.json"
+    "API_Key_path":"API_key.json",
+    "Slack_Webhook_path":"webhook_url.json"
 }
