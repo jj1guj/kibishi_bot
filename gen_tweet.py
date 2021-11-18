@@ -36,6 +36,4 @@ def do_tweet(text):
     api.update_status(text)
 
 if __name__=="__main__":
-    with open(config["text_path"]) as f:
-        Texts=f.readlines()
-    do_tweet(gen_text(Texts))
+    do_tweet(gen_text(get_tweet()))
