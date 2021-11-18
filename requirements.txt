@@ -2,3 +2,4 @@ mojimoji
 unicodedata
 urlextract
 markovify
+tweepy
