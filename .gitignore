@@ -1,2 +1,5 @@
-*.json
+__pycache__/**
+API*.json
+api*.json
 data/**
+*.txt
