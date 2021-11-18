@@ -1,7 +1,7 @@
 {
-    "data_path":"/home/jj1guj/get_tweet/data_kibishi/ref",
+    "data_path":"/home/jj1guj/get_tweet/data_kibishi/",
     "text_path":"test.txt",
     "model_path":"/home/jj1guj/kibishi_bot/models/model.json",
     "API_Key_path":"/home/jj1guj/kibishi_bot/API_key.json",
-    "Slack_Webhook_path":"webhook_url.json"
+    "Slack_Webhook_path":"/home/jj1guj/kibishi_bot/webhook_url.json"
 }
