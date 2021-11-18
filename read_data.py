@@ -74,7 +74,7 @@ def get_tweet():
         for i in all_tweets:
             tweet=i["text"]
             if tweet[:2]!="RT":
-                Tweets.append(process_text(tweet)+"\n")
+                Tweets.append(process_text(tweet))
     return Tweets
 
 
