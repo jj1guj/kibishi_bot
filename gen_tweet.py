@@ -18,9 +18,7 @@ def gen_text(Texts):
         text=model.make_sentence_with_start(beginning="厳しい")
         text=text.replace(" ","")
         if len(text)<=140:
-            #print(text,len(text))
             return text
-            #break
 
 def do_tweet(text):
     with open(config["API_Key_path"]) as f:
