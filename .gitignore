@@ -1,5 +1,5 @@
 __pycache__/**
-API*.json
-api*.json
-webhook*.json
+API*
+api*
+webhook*
 data/**
