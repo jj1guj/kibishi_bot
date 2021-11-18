@@ -3,3 +3,4 @@ unicodedata
 urlextract
 markovify
 tweepy
+slackweb
