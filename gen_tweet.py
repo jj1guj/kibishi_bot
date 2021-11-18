@@ -1,19 +1,16 @@
 import markovify
-import MeCab
 import json
-from markovify import text
 import tweepy
 from read_data import *
 
-with open("config.json") as f:
+with open("/home/jj1guj/kibishi_bot/config.json") as f:
     config=json.load(f)
 
-def gen_text(Texts):
-    parsed_text=""
-    for text in Texts:
-        parsed_text+=MeCab.Tagger("-Owakati").parse(text)
+def gen_text():
+    with open(config["model_path"]) as f:
+        model_json=f.read()
+    model=markovify.Text.from_json(model_json)
 
-    model=markovify.NewlineText(format_text(parsed_text),2)
     while True:
         text=model.make_sentence_with_start(beginning="厳しい")
         text=text.replace(" ","")
@@ -36,4 +33,4 @@ def do_tweet(text):
     api.update_status(text)
 
 if __name__=="__main__":
-    do_tweet(gen_text(get_tweet()))
+    do_tweet(gen_text())
