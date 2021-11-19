@@ -1,5 +1,6 @@
 import json
 import os
+from bs4 import BeautifulSoup
 import re
 import mojimoji
 import unicodedata
@@ -7,7 +8,10 @@ from urlextract import URLExtract
 from xml.sax.saxutils import unescape
 
 extractor=URLExtract()
-with open("config.json") as f:
+client_list=["Twitter Web App","Twitter for iPhone","Twitter for iPad",
+    "Twitter for Android","TweetDeck"]
+
+with open("/home/jj1guj/kibishi_bot/config.json") as f:
     config=json.load(f)
 
 def format_text(t):
@@ -74,7 +78,11 @@ def get_tweet():
         for i in all_tweets:
             tweet=i["text"]
             if tweet[:2]!="RT":
-                Tweets.append(process_text(tweet))
+                #どのクライアントからツイートされたか見る
+                #clinent_listに入っていないものはbotとみなす
+                soup=BeautifulSoup(i["source"],"html.parser")
+                if soup.text in client_list:
+                    Tweets.append(process_text(tweet))
     return Tweets
 
 

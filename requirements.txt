@@ -3,3 +3,4 @@ urlextract
 markovify
 tweepy
 slackweb
+beautifulsoup4
