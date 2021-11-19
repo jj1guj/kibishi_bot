@@ -1,6 +1,6 @@
 __pycache__/**
+model*/**
 API*
 api*
 webhook*
 data/**
-models/**
